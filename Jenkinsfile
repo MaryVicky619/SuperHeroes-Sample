@@ -30,7 +30,7 @@ pipeline {
                 folderCreateOperation('${JENKINS_HOME}/userContent/sample-pruebita/${JOB_BASE_NAME}'),
                 fileCopyOperation(excludes: '',
                 flattenFiles: false,
-                includes: 'src/app/*.html',
+                includes: 'src/tests/*.html',
                 targetLocation: '${JENKINS_HOME}/userContent/sample-pruebita//${JOB_BASE_NAME}'),
                 fileRenameOperation(source: '${JENKINS_HOME}/userContent/sample-pruebita//${JOB_BASE_NAME}/src/tests/units.html',destination: '${JENKINS_HOME}/userContent/sample-pruebita/${JOB_BASE_NAME}/src/tests/results_${BUILD_NUMBER}.html')])
             }
